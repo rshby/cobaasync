@@ -1,0 +1,10 @@
+module cobaasync
+
+go 1.20
+
+require (
+	github.com/google/uuid v1.3.1 // indirect
+	github.com/hasura/go-graphql-client v0.10.0 // indirect
+	github.com/klauspost/compress v1.17.0 // indirect
+	nhooyr.io/websocket v1.8.7 // indirect
+)
