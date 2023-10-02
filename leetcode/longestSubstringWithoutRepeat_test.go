@@ -5,7 +5,7 @@ import (
 	"testing"
 )
 
-func TestLongestSubstringWithoutRepeatChar(t *testing.T) {
+func TestLongestSubstringWithoutRepeat(t *testing.T) {
 	cekLongestSubstring := func(s string) int {
 		start := -1
 		lenMax := 0
@@ -15,18 +15,18 @@ func TestLongestSubstringWithoutRepeatChar(t *testing.T) {
 			dict[i] = -1
 		}
 
-		for id, value := range s {
+		for idx, value := range s {
 			v := dict[value]
 			if v > start {
 				start = v
 			}
 
-			length := id - start
+			length := idx - start
 			if length > lenMax {
 				lenMax = length
 			}
 
-			dict[value] = id
+			dict[value] = idx
 		}
 
 		return lenMax
