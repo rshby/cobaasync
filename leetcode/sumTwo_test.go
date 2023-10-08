@@ -10,8 +10,8 @@ func TestSumTwo(t *testing.T) {
 		temp := map[int]int{}
 
 		for idx, value := range nums {
-			hasilkurang := target - value
-			res, ok := temp[hasilkurang]
+			hasilKurang := target - value
+			res, ok := temp[hasilKurang]
 			if ok {
 				return []int{res, idx}
 			}
