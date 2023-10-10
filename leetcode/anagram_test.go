@@ -11,15 +11,15 @@ func TestAnagram(t *testing.T) {
 			return false
 		}
 
-		var temp = [26]int{}
+		temp := [26]int{}
 
-		for idx := 0; idx < len(s); idx++ {
-			temp[s[idx]-'a']++
-			temp[t[idx]-'a']--
+		for i := 0; i < len(s); i++ {
+			temp[s[i]-'a']++
+			temp[t[i]-'a']--
 		}
 
-		for i := 0; i < len(temp); i++ {
-			if temp[i] != 0 {
+		for _, value := range temp {
+			if value != 0 {
 				return false
 			}
 		}
