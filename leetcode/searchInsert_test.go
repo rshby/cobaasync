@@ -6,18 +6,18 @@ import (
 )
 
 func TestSearchInsert(t *testing.T) {
-	searchInsert := func(input []int, target int) int {
+	searchInsert := func(nums []int, target int) int {
 		start := 0
-		end := len(input) - 1
+		end := len(nums) - 1
 		var mid int
 
 		for start <= end {
 			mid = (start + end + 1) / 2
-			if input[mid] == target {
+			if nums[mid] == target {
 				return mid
 			}
 
-			if input[mid] < target {
+			if nums[mid] < target {
 				start = mid + 1
 			} else {
 				end = mid - 1
@@ -27,5 +27,5 @@ func TestSearchInsert(t *testing.T) {
 		return start
 	}
 
-	fmt.Println(searchInsert([]int{1, 2, 3, 4, 5}, 2))
+	fmt.Println(searchInsert([]int{1, 2, 3, 4, 5, 6, 7, 8}, 0))
 }

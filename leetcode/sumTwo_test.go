@@ -9,16 +9,16 @@ func TestSumTwo(t *testing.T) {
 	sumTwo := func(nums []int, target int) []int {
 		temp := map[int]int{}
 
-		for idx, value := range nums {
-			if res, ok := temp[target-value]; ok {
-				return []int{res, idx}
+		for id, value := range nums {
+			if result, ok := temp[target-value]; ok {
+				return []int{result, id}
 			}
 
-			temp[value] = idx
+			temp[value] = id
 		}
 
 		return []int{}
 	}
 
-	fmt.Println(sumTwo([]int{5, 2, 9, 10, 22}, 7))
+	fmt.Println(sumTwo([]int{5, 2, 7, 10}, 9))
 }

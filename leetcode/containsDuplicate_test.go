@@ -5,20 +5,20 @@ import (
 	"testing"
 )
 
-func TestContainsDuplicate(t *testing.T) {
-	containsDuplicate := func(nums []int) bool {
+func TestContainDuplicate(t *testing.T) {
+	containDup := func(nums []int) bool {
 		temp := map[int]int{}
 
-		for idx, value := range nums {
+		for id, value := range nums {
 			if _, ok := temp[value]; ok {
 				return true
 			}
 
-			temp[value] = idx
+			temp[value] = id
 		}
 
 		return false
 	}
 
-	fmt.Println(containsDuplicate([]int{1, 2, 5, 3}))
+	fmt.Println(containDup([]int{1, 2, 3, 4, 5}))
 }

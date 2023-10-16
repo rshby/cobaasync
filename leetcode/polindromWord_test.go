@@ -9,6 +9,7 @@ import (
 func TestPolindromWord(t *testing.T) {
 	polindromWord := func(s string) bool {
 		word := s
+
 		temp := []string{}
 
 		for i := 0; i < len(s); i++ {
@@ -18,5 +19,5 @@ func TestPolindromWord(t *testing.T) {
 		return word == strings.Join(temp, "")
 	}
 
-	fmt.Println(polindromWord("aba"))
+	fmt.Println(polindromWord("avva"))
 }

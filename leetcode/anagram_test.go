@@ -11,7 +11,7 @@ func TestAnagram(t *testing.T) {
 			return false
 		}
 
-		temp := [26]int{}
+		var temp [26]int
 
 		for i := 0; i < len(s); i++ {
 			temp[s[i]-'a']++

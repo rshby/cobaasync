@@ -1,6 +1,7 @@
 package hasura
 
 import (
+	"log"
 	"sync"
 	"testing"
 )
@@ -16,12 +17,14 @@ func TestHasura(t *testing.T) {
 	//client := graphql.NewClient("https://localhost:8003/graphql", nil)
 
 	for i := 0; i < 2; i++ {
-		wg.Add(1)
 		go func() {
+			wg.Add(1)
 			defer wg.Done()
 
 			//err := client.Query(context.Background())
 		}()
 	}
 
+	wg.Wait()
+	log.Println("done")
 }
