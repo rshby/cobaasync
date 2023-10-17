@@ -1,26 +1,26 @@
 package leetcode
 
 import (
-	"fmt"
+	"log"
 	"testing"
 )
 
-func TestBubleSort(t *testing.T) {
+func TestBubleSorting(t *testing.T) {
 	bubleSort := func(nums []int) []int {
 		isDone := false
 
 		for !isDone {
 			isDone = true
-			i := 0
-			for i < len(nums)-1 {
+			for i := 0; i < len(nums)-1; i++ {
 				if nums[i] > nums[i+1] {
 					nums[i], nums[i+1] = nums[i+1], nums[i]
 					isDone = false
 				}
-				i++
 			}
 		}
+
 		return nums
 	}
-	fmt.Println(bubleSort([]int{4, 6, 5, 1, 2}))
+
+	log.Println(bubleSort([]int{5, 1, 2, 3, 4}))
 }
