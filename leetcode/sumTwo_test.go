@@ -1,7 +1,7 @@
 package leetcode
 
 import (
-	"fmt"
+	"log"
 	"testing"
 )
 
@@ -10,8 +10,8 @@ func TestSumTwo(t *testing.T) {
 		temp := map[int]int{}
 
 		for id, value := range nums {
-			if result, ok := temp[target-value]; ok {
-				return []int{result, id}
+			if res, ok := temp[target-value]; ok {
+				return []int{res, id}
 			}
 
 			temp[value] = id
@@ -20,5 +20,5 @@ func TestSumTwo(t *testing.T) {
 		return []int{}
 	}
 
-	fmt.Println(sumTwo([]int{5, 2, 7, 10}, 9))
+	log.Println(sumTwo([]int{1, 3, 5, 2, 7}, 9))
 }

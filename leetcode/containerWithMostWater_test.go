@@ -6,7 +6,7 @@ import (
 )
 
 func TestContainerWithMostWater(t *testing.T) {
-	cekContainer := func(height []int) int {
+	maxArea := func(height []int) int {
 		var max, left, t int
 		right := len(height) - 1
 
@@ -27,5 +27,5 @@ func TestContainerWithMostWater(t *testing.T) {
 		return max
 	}
 
-	fmt.Println(cekContainer([]int{2, 3, 4}))
+	fmt.Println(maxArea([]int{100, 200, 300, 400}))
 }

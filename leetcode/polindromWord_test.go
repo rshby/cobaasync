@@ -11,7 +11,6 @@ func TestPolindromWord(t *testing.T) {
 		word := s
 
 		temp := []string{}
-
 		for i := 0; i < len(s); i++ {
 			temp = append(temp, string(s[len(s)-1-i]))
 		}
@@ -19,5 +18,5 @@ func TestPolindromWord(t *testing.T) {
 		return word == strings.Join(temp, "")
 	}
 
-	fmt.Println(polindromWord("avva"))
+	fmt.Println(polindromWord("aba"))
 }

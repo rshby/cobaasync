@@ -6,17 +6,17 @@ import (
 )
 
 func TestPolindromNumber(t *testing.T) {
-	cekPolindrom := func(x int) bool {
-		number := x
+	polindromNumber := func(num int) bool {
+		number := num
 
-		temp := 0
-		for x > 0 {
-			temp = temp*10 + x%10
-			x /= 10
+		var temp int
+		for num > 0 {
+			temp = temp*10 + num%10
+			num /= 10
 		}
 
 		return number == temp
 	}
 
-	fmt.Println(cekPolindrom(122))
+	fmt.Println(polindromNumber(121))
 }

@@ -1,25 +1,25 @@
 package leetcode
 
 import (
-	"fmt"
+	"log"
 	"sort"
 	"testing"
 )
 
-func TestMedianSortArray(t *testing.T) {
-	generateMedian := func(a, b []int) float64 {
-		x := a
+func TestMedianArray(t *testing.T) {
+	medianArray := func(a, b []int) float64 {
+		temp := a
 		for _, value := range b {
-			x = append(x, value)
+			temp = append(temp, value)
 		}
 
-		sort.Ints(x)
-		if len(x)%2 == 0 {
-			return float64(x[len(x)/2-1]+x[len(x)/2]) / 2.0
+		sort.Ints(temp)
+		if len(temp)%2 == 0 {
+			return float64(temp[len(temp)/2-1]+temp[len(temp)/2]) / 2.0
 		}
 
-		return float64(x[len(x)/2])
+		return float64(temp[len(temp)/2])
 	}
 
-	fmt.Println(generateMedian([]int{1, 2}, []int{3, 4}))
+	log.Println(medianArray([]int{1, 2, 3, 4}, []int{5, 6}))
 }
